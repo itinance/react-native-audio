@@ -12,7 +12,6 @@ import java.util.List;
 
 public class ReactNativeAudioPackage implements ReactPackage {
 
-
     /**
      * @param reactContext react application context that can be used to create modules
      * @return list of native modules to register with the newly created catalyst instance
@@ -24,6 +23,11 @@ public class ReactNativeAudioPackage implements ReactPackage {
 
         return modules;
     }
+
+    @Override 
+    public List<Class<? extends JavaScriptModule>> createJSModules() { 
+        return Collections.emptyList(); 
+    }    
 
     /**
      * @param reactContext
